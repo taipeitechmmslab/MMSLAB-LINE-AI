@@ -1,4 +1,4 @@
-# Echo Bot
+# LINE bot
 
 An example LINE bot upload image to Imgur
 
