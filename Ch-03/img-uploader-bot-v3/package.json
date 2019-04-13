@@ -1,7 +1,7 @@
 {
-  "name": "place-search-bot-v2",
+  "name": "img-uploader-bot-v2",
   "version": "0.0.0",
-  "description": "An example LINE bot search nearby place",
+  "description": "An example LINE bot upload image to Imgur",
   "main": "index.js",
   "scripts": {
     "start": "node .",

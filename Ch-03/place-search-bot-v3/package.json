@@ -1,5 +1,5 @@
 {
-  "name": "place-search-bot-v2",
+  "name": "place-search-bot-v3",
   "version": "0.0.0",
   "description": "An example LINE bot search nearby place",
   "main": "index.js",
@@ -11,5 +11,8 @@
     "@line/bot-sdk": "^5.0.0",
     "express": "^4.16.3",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
   }
 }
