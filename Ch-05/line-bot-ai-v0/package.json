@@ -1,0 +1,9 @@
+{
+  "name": "line-bot-ai-v0",
+  "version": "0.0.0",
+  "description": "A node-nlp example.",
+  "main": "nlp.js",
+  "dependencies": {
+    "node-nlp": "^3.0.2"
+  }
+}
