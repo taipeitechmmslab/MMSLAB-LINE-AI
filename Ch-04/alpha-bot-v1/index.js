@@ -119,13 +119,12 @@ function handleEvent(event) {
               type: 'location',
               label: '開啟地圖'
             }
-
+          }
         ]
       }
     }
     return client.replyMessage(event.replyToken, msgToUser);
   }
-
   return Promise.resolve(null);
 }
 const port = process.env.PORT || 3000;
