@@ -98,5 +98,4 @@ class LineLogin {
         return crypto.randomBytes(20).toString('hex');
     }
 }
-
 module.exports = LineLogin;

@@ -13,3 +13,5 @@ html
             .h4.text-center.area-margin LINE Alpha Bot Web Login
             #web-login-button.center-block.area-margin
               a.center-block(href='/auth/line')
+            if ErrMsg 
+              .text-center.alert.alert-danger= ErrMsg

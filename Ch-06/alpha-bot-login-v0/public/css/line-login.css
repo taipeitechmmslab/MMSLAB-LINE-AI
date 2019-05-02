@@ -9,8 +9,7 @@
   .area-margin {
     text-align: center;
     margin: 30px 10px;
-  }
-  
+  } 
   
   #web-login-button a {
     width: 151px;
@@ -27,8 +26,4 @@
   .profile-margin {
     text-align: center;
     margin: 10px;
-  }
-  
-  .profile-button {
-    margin: 20px 0
   }
