@@ -8,7 +8,7 @@ const config = {
   channelSecret: process.env.CHANNEL_SECRET,
 };
 const client = new line.Client(config);
-const imgurMrg = new imgur();
+const imgurMgr = new imgur();
 const app = express();
 app.post('/callback', line.middleware(config), (req, res) => {
   Promise
@@ -23,7 +23,8 @@ app.get('/', (req, res) => {
   res.json("ok");
 });
 function handleEvent(event) {
-  if (event.replyToken === "00000000000000000000000000000000" || event.replyToken === "ffffffffffffffffffffffffffffffff") {
+  if (event.replyToken === "00000000000000000000000000000000" || 
+  event.replyToken === "ffffffffffffffffffffffffffffffff") {
     return Promise.resolve(null);
   }
   if (event.type === 'message' && event.message.type === 'image') {
@@ -36,10 +37,10 @@ function handleEvent(event) {
           })
           stream.on('end', () => {
             const image = `${Buffer.concat(data).toString('base64')}`
-            imgurMrg.uploadImg(image)
+            imgurMgr.uploadImg(image)
               .then((body) => {
                 const resBody = JSON.parse(body);
-                const templateMsg = imgurMrg.ShareAndDeleteTmp(event.source.userId, resBody);
+                const templateMsg = imgurMgr.ShareAndDeleteTmp(event.source.userId, resBody);
                 return client.replyMessage(event.replyToken, templateMsg);
               });
           })
@@ -49,7 +50,7 @@ function handleEvent(event) {
     const data = querystring.parse(event.postback.data);
     switch (data.action) {
       case 'img-delete':
-        imgurMrg.deleteImg(data.hash)
+        imgurMgr.deleteImg(data.hash)
           .then(() => {
             return client.replyMessage(event.replyToken, { type: 'text', text: 'Deleted' });
           })
