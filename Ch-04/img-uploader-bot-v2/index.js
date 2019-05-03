@@ -12,10 +12,10 @@ const imgurMgr = new imgur();
 const app = express();
 app.post('/callback', line.middleware(config), (req, res) => {
   Promise
-    .all(req.body.events.map(handleEvent))
-    .then((result) => res.json(result))
+    .all(req.body.events.map(handleEvent)) //使用handleEvent函數，分析事件
+    .then((result) => res.json(result)) //回應給LINE Server
     .catch((err) => {
-      console.error(err);
+      console.error(err); //印出錯誤的事件內容
       res.status(500).end();
     });
 });
@@ -24,33 +24,33 @@ app.get('/', (req, res) => {
 });
 function handleEvent(event) {
   if (event.replyToken === "00000000000000000000000000000000" || 
-  event.replyToken === "ffffffffffffffffffffffffffffffff") {
+    event.replyToken === "ffffffffffffffffffffffffffffffff") {//判斷事件類型是否為Webhook URL測試
     return Promise.resolve(null);
   }
   if (event.type === 'message' && event.message.type === 'image') {
     if (event.message.contentProvider.type === "line") {
-      client.getMessageContent(event.message.id)
+      client.getMessageContent(event.message.id) //取得LINE訊息的檔案
         .then((stream) => {
           let data = [];
-          stream.on('data', (chunk) => {
+          stream.on('data', (chunk) => {  //取得的檔案串流的data位元組
             data.push(chunk)
           })
-          stream.on('end', () => {
-            const image = `${Buffer.concat(data).toString('base64')}`
-            imgurMgr.uploadImg(image)
-              .then((body) => {
-                const resBody = JSON.parse(body);
-                const templateMsg = imgurMgr.ShareAndDeleteTmp(event.source.userId, resBody);
-                return client.replyMessage(event.replyToken, templateMsg);
+          stream.on('end', () => {  //取得的檔案串流的stream結束end
+            const image = `${Buffer.concat(data).toString('base64')}` //data位元組串接後用Base64格式編碼
+            imgurMgr.uploadImg(image)  //透過imgurMgr的自訂方法上傳圖片
+              .then((body) => {  //取得上傳的結果
+                const resBody = JSON.parse(body);  //取出將上傳結果資料轉為JSON
+                const templateMsg = imgurMgr.ShareAndDeleteTmp(event.source.userId, resBody); //產生樣板訊息
+                return client.replyMessage(event.replyToken, templateMsg); //發送樣板訊息給使用者
               });
           })
         })
     }
   } else if (event.type === 'postback') {
-    const data = querystring.parse(event.postback.data);
+    const data = querystring.parse(event.postback.data); //抓取查詢的參數
     switch (data.action) {
-      case 'img-delete':
-        imgurMgr.deleteImg(data.hash)
+      case 'img-delete': //刪除照片
+        imgurMgr.deleteImg(data.hash) //
           .then(() => {
             return client.replyMessage(event.replyToken, { type: 'text', text: 'Deleted' });
           })
