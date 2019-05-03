@@ -40,7 +40,7 @@ module.exports = class Imgur {
             return tmpMsg;
         } else {
             this.db[id].push(tmpMsg);
-            const photos = this.db[id].map((photo, idx) => {
+            const photos = this.db[id].slice(-10).map((photo, idx) => {
                 return {
                     text: `Photo ${idx + 1}`,
                     thumbnailImageUrl: photo.template.thumbnailImageUrl,
