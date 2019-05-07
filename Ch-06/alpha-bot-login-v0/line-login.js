@@ -44,14 +44,14 @@ class LineLogin {
     return url;
   }
 
-  authcb(succ, fail) {  //處理LINE Server的跳轉授權，並取得Aceesk Token
+  authcb(succ, fail) {  //處理LINE Server的跳轉授權，並取得Access Token
     return (req, res, next) => {
       const { code } = req.query;
       const { state } = req.query;
       if (req.session.line_login_state !== state) { //驗證是否為相同使用者的瀏覽器
         return fail(req, res, next, new Error('Authorization failed. State does not match.'));
       }
-      this.issue_line_access_token(code).then((token_response) => { //取得Aceesk Token
+      this.issue_line_access_token(code).then((token_response) => { //取得Access Token
         if (token_response.id_token) {
           let decoded_id_token;
           try {
@@ -74,7 +74,7 @@ class LineLogin {
         }
         delete req.session.line_login_state;
         delete req.session.line_login_nonce;
-        succ(req, res, token_response); //將Acess Token傳給succ的函數
+        succ(req, res, token_response); //將Access Token傳給succ的函數
       }).catch((error) => {
         fail(req, res, next, error); //將error傳給傳給fail的函數
       });
