@@ -1,4 +1,3 @@
-doctype html
 html
   head
     meta(name='viewport' content='width=device-width, initial-scale=1')    
@@ -12,7 +11,7 @@ html
           .area
             .center-block.profile-margin
               img(src= picture).profile-img.img-circle
-              h3(text= name)
-              .h4.text-center.area-margin= name            
+              h4.text-center= name            
               a.btn.btn-default.btn-lg(href='/auth/line/logout')
-                span.glyphicon.glyphicon-log-out Logout
+                span.glyphicon.glyphicon-log-out
+                span.area-margin Logout
