@@ -76,7 +76,7 @@ class LineLogin {
         delete req.session.line_login_nonce;
         succ(req, res, token_response); //將Access Token傳給succ的函數
       }).catch((error) => {
-        fail(req, res, next, error); //將error傳給傳給fail的函數
+        fail(req, res, next, error); //將error傳給fail的函數
       });
     };
   }
