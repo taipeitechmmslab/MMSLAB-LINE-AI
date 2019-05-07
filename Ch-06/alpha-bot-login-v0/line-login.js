@@ -69,7 +69,7 @@ class LineLogin {
             }
             token_response.id_token = decoded_id_token; //
           } catch (exception) {
-            fail(new Error('Verification of id token failed.'));
+            fail(req, res, next,new Error('Verification of id token failed.'));
           }
         }
         delete req.session.line_login_state;

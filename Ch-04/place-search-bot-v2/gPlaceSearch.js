@@ -1,6 +1,6 @@
-const request = require('request');
-const querystring = require('querystring');
-const authConfig = {
+const request = require('request');  //使用發送HTTP的套件
+const querystring = require('querystring');  //使用處理URL的查詢參數套件
+const authConfig = {  //授權參數設定
   GoogleKey: process.env.GOOGLE_MAP_API_KEY,
   ImgurClientId: process.env.IMGUR_CLIENT_ID
 };
@@ -10,7 +10,7 @@ module.exports = class search {
     this.nearBySearchAPIURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?';
     this.placeIdURL = 'https://www.google.com/maps/place/?q=place_id:';
     this.imgurAPIURL = 'https://api.imgur.com/3/upload';
-    this.default = 'https://i.imgur.com/ukLRiR9.jpg';
+    this.default = 'https://i.imgur.com/ukLRiR9.jpg';  //地點圖片沒有取得時的預設圖片連結
     this.photoDB = {};
   }
   SearchResultImageTmp(params) {  //傳入搜尋的地點參數並產生搜尋結果的image carousel
@@ -20,9 +20,9 @@ module.exports = class search {
       request.get(searchURL, (err, httpResponse, body) => {
         let msgToUser = { type: 'text', text: 'Searching' };
         if (!err && httpResponse.statusCode === 200) {
-          const resBody = JSON.parse(body); //成功搜尋地點
+          const resBody = JSON.parse(body); //取出地點資料
           Promise
-            .all(resBody.results.slice(0, 10).map((p) => {
+            .all(resBody.results.slice(0, 10).map((p) => {  //處理前十筆的地點資料
               let placeImgTmpMsg = {
                 imageUrl: this.default,
                 action: {  //單一URI動作，點擊後打開Google Map的網址
@@ -64,10 +64,10 @@ module.exports = class search {
     })
   }
   GetPlacePhoto(place_id, photoRefId) { //取得上傳至Imgur的地點圖片
-    if (this.photoDB[place_id] === undefined) { //檢查有無暫存的圖片
+    if (this.photoDB[place_id] === undefined) { //檢查圖片的暫存
       const searchURL = {
         url: 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=1024'
-          + `&photoreference=${photoRefId}`
+          + `&photoreference=${photoRefId}`  //設定要取得的圖片編號與授權Key
           + `&key=${this.authKey}`,
         encoding: null
       };
