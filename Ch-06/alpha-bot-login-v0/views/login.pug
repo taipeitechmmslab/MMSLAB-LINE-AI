@@ -1,16 +1,12 @@
-html
-  head
-    meta(name='viewport' content='width=device-width, initial-scale=1')    
-    link(rel='stylesheet', href='css/line-login.css')
-    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
-    title LINE Alpha Bot Web Login
-  body
-    .container
-      .row
-        .col-md-4.col-md-offset-4
-          .area
-            .h4.text-center.area-margin LINE Alpha Bot Web Login
-            #web-login-button.center-block.area-margin
-              a.center-block(href='/auth/line')
-            if ErrMsg 
-              .text-center.alert.alert-danger= ErrMsg
+extends layout
+
+block content
+  .container
+    .row  
+      .col-md-4.offset-md-4
+        .area.mx-auto.text-center
+          .h4.py-2 LINE Web Login
+          #web-login-button
+            a.mx-auto(href='/auth/line')
+          if ErrMsg 
+            .alert.alert-danger= ErrMsg

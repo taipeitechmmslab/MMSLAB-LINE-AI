@@ -6,10 +6,6 @@
     padding: 30px 0;
     word-break: break-all;
   }
-  .area-margin {
-    text-align: center;
-    margin: 30px 10px;
-  } 
   
   #web-login-button a {
     width: 151px;
@@ -22,8 +18,4 @@
     width: 100px;
     height: 100px;
     max-width: 100%;
-  }
-  .profile-margin {
-    text-align: center;
-    margin: 10px;
   }

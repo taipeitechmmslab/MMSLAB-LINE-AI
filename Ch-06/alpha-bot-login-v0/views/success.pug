@@ -1,17 +1,11 @@
-html
-  head
-    meta(name='viewport' content='width=device-width, initial-scale=1')    
-    link(rel='stylesheet', href='css/line-login.css')
-    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
-    title LINE Alpha Bot Web Login
-  body
-    .container
-      .row
-        .col-md-4.col-md-offset-4
-          .area
-            .center-block.profile-margin
-              img(src= picture).profile-img.img-circle
-              h4.text-center= name            
-              a.btn.btn-default.btn-lg(href='/auth/line/logout')
-                span.glyphicon.glyphicon-log-out
-                span.area-margin Logout
+extends layout
+
+block content
+  .container
+    .row
+      .col-md-4.offset-md-4
+        .area.mx-auto.text-center
+          img(src= picture).profile-img.rounded-circle
+          h4.py-2= name            
+          a.btn.btn-outline-secondary.btn-md(href='/auth/line/logout')
+            span Logout
