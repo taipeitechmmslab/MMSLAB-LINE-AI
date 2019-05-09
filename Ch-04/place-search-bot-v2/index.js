@@ -29,7 +29,7 @@ function handleEvent(event) {
   }
   if (event.type === 'message' && event.message.type === 'location') {
     conversation[event.source.userId] = event.message;  //暫存使用者傳送的地點訊息
-    const catReply = {  //訊問使用者要查詢的地點訊息
+    const catReply = {  //詢問使用者要查詢的地點訊息
       type: 'text',  
       text: '輸入要查詢的地點類型與半徑範例:\r\n300restaruant\r\ncafe100\r\natm 300\r\n'
     };
