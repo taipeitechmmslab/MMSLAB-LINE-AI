@@ -1,8 +1,6 @@
 # LINE bot
 
-An example LINE bot with following funcs
-1. upload image to Imgur.
-2. search nearby place
+An example LINE bot for richmenu switch.
 
 ## How to use
 
@@ -17,8 +15,6 @@ $ npm install
 ``` shell
 $ export CHANNEL_SECRET=YOUR_CHANNEL_SECRET
 $ export CHANNEL_ACCESS_TOKEN=YOUR_CHANNEL_ACCESS_TOKEN
-$ export IMGUR_CLIENT_ID=YOUR_IMGUR_CLIENT_ID
-$ export GOOGLE_MAP_API_KEY=YOUR_GOOGLE_MAP_API_KEY
 $ export PORT=1234
 ```
 
