@@ -1,0 +1,14 @@
+extends layout
+
+block scripts
+  script(src='//d.line-scdn.net/liff/1.0/sdk.js')
+  script(src='/js/liff-demo.js')
+
+block content
+  .container
+    .row
+      .col-md-4.offset-md-4
+        .area.mx-auto.text-center
+          img(src='').profile-img.rounded-circle#displayprofileimgfield
+          h4.py-2#displaynamefield 
+          a.btn.btn-outline-secondary.btn-md#liff-logout(href='javascript:liff.closeWindow();') Logout

@@ -1,0 +1,23 @@
+{
+  "name": "liff-login-v0",
+  "version": "0.0.0",
+  "description": "An example LINE Login Website using LIFF",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "debug": "node --nolazy --inspect-brk=9229 ."
+  },
+  "dependencies": {
+    "bluebird": "^3.5.4",
+    "express": "^4.16.3",
+    "express-session": "^1.16.1",
+    "jsonwebtoken": "^8.5.1",
+    "pug": "^2.0.3",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2"
+  }
+}
