@@ -1,0 +1,23 @@
+{
+  "name": "line-notify-v0",
+  "version": "0.0.0",
+  "description": "LINE Notify demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "debug": "node --nolazy --inspect-brk=9229 ."
+  },
+  "dependencies": {
+    "bluebird": "^3.5.4",
+    "express": "^4.16.3",
+    "express-session": "^1.16.1",
+    "moment": "^2.24.0",
+    "pug": "^2.0.3",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2"
+  }
+}

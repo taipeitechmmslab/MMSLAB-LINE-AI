@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .container
+    .row  
+      .col-md-4.offset-md-4
+        .area.mx-auto.text-center
+          h4.py-2 LINE Notify Demo
+          p 登入後可以預約推播訊息的時間
+          a.btn.btn-outline-primary.btn-md(href='/auth/notify') Signup            
+          if ErrMsg 
+            .alert.alert-danger= ErrMsg

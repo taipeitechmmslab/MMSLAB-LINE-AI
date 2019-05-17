@@ -1,0 +1,23 @@
+extends layout
+block scripts
+  script(src='/js/moment.js')
+  script(src='/js/notify-demo.js')
+
+block content
+  .container
+    .row
+      .col-md-4.offset-md-4
+        .area.mx-auto.text-center
+          h4.py-2 嗨 #{name}
+          h5#show-time-string 現在時間：                                                
+          a.btn.btn-outline-secondary.btn-sm(href='/auth/notify/logout') 登出
+        .area.text-center
+          h2 通知功能
+          .col-md-8.mx-auto.my-2     
+            .input-group              
+              input.form-control#schedule-timeset(type='number' min='0' value='5')
+              .input-group-append
+                span.input-group-text 秒後
+                a.btn.btn-primary.btn-md(href='#' onclick='NotifyMe()') 通知我
+          if schNotify
+            h5#schedule-notify 預定通知時間：#{schNotify}
