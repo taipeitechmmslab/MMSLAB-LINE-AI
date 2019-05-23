@@ -1,0 +1,1171 @@
+{
+  "settings": {
+    "languages": [
+      "zh"
+    ]
+  },
+  "nluManager": {
+    "settings": {},
+    "languages": [
+      "zh"
+    ],
+    "intentDomains": {},
+    "domainManagers": {
+      "zh": {
+        "settings": {
+          "language": "zh",
+          "config": {
+            "activation": "leaky-relu",
+            "hiddenLayers": [],
+            "iterations": 20000,
+            "learningRate": 0.8,
+            "errorThresh": 0.00005,
+            "momentum": 0.5,
+            "deltaErrorThresh": 0.000001,
+            "maxDecimals": 9,
+            "leakyReluAlpha": 0.06,
+            "timeout": 120000
+          }
+        },
+        "language": "zh",
+        "nluClassName": "BrainNLU",
+        "useMasterDomain": true,
+        "trainByDomain": true,
+        "keepStopwords": true,
+        "stemDict": {
+          "北,台,國,在,市,法,的,聽,餐": {
+            "domain": "default",
+            "intent": "places.search"
+          },
+          "國,廳,您好,想要,我,找,法,的,附近,餐": {
+            "domain": "default",
+            "intent": "places.search"
+          },
+          "嗨,廳,我,找,要,餐": {
+            "domain": "default",
+            "intent": "places.search"
+          },
+          "廳,有,甚麼,餐": {
+            "domain": "default",
+            "intent": "places.search"
+          },
+          "廳,找,餐": {
+            "domain": "default",
+            "intent": "places.search"
+          },
+          "便利,商店,的,附近": {
+            "domain": "default",
+            "intent": "places.search"
+          },
+          "提款,機,的,附近": {
+            "domain": "default",
+            "intent": "places.search"
+          },
+          "了,我,要,開,離": {
+            "domain": "default",
+            "intent": "greeting.bye"
+          },
+          "謝謝": {
+            "domain": "default",
+            "intent": "greeting.bye"
+          },
+          "再,見": {
+            "domain": "default",
+            "intent": "greeting.bye"
+          },
+          "你好": {
+            "domain": "default",
+            "intent": "greeting.hello"
+          },
+          "哈囉": {
+            "domain": "default",
+            "intent": "greeting.hello"
+          },
+          "嗨": {
+            "domain": "default",
+            "intent": "greeting.hello"
+          },
+          "HI": {
+            "domain": "default",
+            "intent": "greeting.hello"
+          },
+          "您好": {
+            "domain": "default",
+            "intent": "greeting.hello"
+          },
+          "做,甚麼,能": {
+            "domain": "default",
+            "intent": "greeting.intro"
+          },
+          "你,幹嘛,能": {
+            "domain": "default",
+            "intent": "greeting.intro"
+          },
+          "介紹": {
+            "domain": "default",
+            "intent": "greeting.intro"
+          }
+        },
+        "intentDict": {
+          "places.search": "default",
+          "greeting.bye": "default",
+          "greeting.hello": "default",
+          "greeting.intro": "default"
+        },
+        "useStemDict": true,
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "language": "zh",
+              "config": {
+                "activation": "leaky-relu",
+                "hiddenLayers": [],
+                "iterations": 20000,
+                "learningRate": 0.8,
+                "errorThresh": 0.00005,
+                "momentum": 0.5,
+                "deltaErrorThresh": 0.000001,
+                "maxDecimals": 9,
+                "leakyReluAlpha": 0.06,
+                "timeout": 120000
+              }
+            },
+            "language": "zh",
+            "keepStopwords": "zh",
+            "docs": [
+              {
+                "intent": "default",
+                "utterance": [
+                  "在",
+                  "台",
+                  "北",
+                  "市",
+                  "的",
+                  "法",
+                  "國",
+                  "餐",
+                  "聽"
+                ],
+                "tokens": [
+                  "在",
+                  "台",
+                  "北",
+                  "市",
+                  "的",
+                  "法",
+                  "國",
+                  "餐",
+                  "聽"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "您好",
+                  "我",
+                  "想要",
+                  "找",
+                  "附近",
+                  "的",
+                  "法",
+                  "國",
+                  "餐",
+                  "廳"
+                ],
+                "tokens": [
+                  "您好",
+                  "我",
+                  "想要",
+                  "找",
+                  "附近",
+                  "的",
+                  "法",
+                  "國",
+                  "餐",
+                  "廳"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "嗨",
+                  "我",
+                  "要",
+                  "找",
+                  "餐",
+                  "廳"
+                ],
+                "tokens": [
+                  "嗨",
+                  "我",
+                  "要",
+                  "找",
+                  "餐",
+                  "廳"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "有",
+                  "甚麼",
+                  "餐",
+                  "廳"
+                ],
+                "tokens": [
+                  "有",
+                  "甚麼",
+                  "餐",
+                  "廳"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "找",
+                  "餐",
+                  "廳"
+                ],
+                "tokens": [
+                  "找",
+                  "餐",
+                  "廳"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "附近",
+                  "的",
+                  "便利",
+                  "商店"
+                ],
+                "tokens": [
+                  "附近",
+                  "的",
+                  "便利",
+                  "商店"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "附近",
+                  "的",
+                  "提款",
+                  "機"
+                ],
+                "tokens": [
+                  "附近",
+                  "的",
+                  "提款",
+                  "機"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "我",
+                  "要",
+                  "離",
+                  "開",
+                  "了"
+                ],
+                "tokens": [
+                  "我",
+                  "要",
+                  "離",
+                  "開",
+                  "了"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "謝謝"
+                ],
+                "tokens": [
+                  "謝謝"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "再",
+                  "見"
+                ],
+                "tokens": [
+                  "再",
+                  "見"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "你好"
+                ],
+                "tokens": [
+                  "你好"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "哈囉"
+                ],
+                "tokens": [
+                  "哈囉"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "嗨"
+                ],
+                "tokens": [
+                  "嗨"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "HI"
+                ],
+                "tokens": [
+                  "HI"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "您好"
+                ],
+                "tokens": [
+                  "您好"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "能",
+                  "做",
+                  "甚麼"
+                ],
+                "tokens": [
+                  "能",
+                  "做",
+                  "甚麼"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "你",
+                  "能",
+                  "幹嘛"
+                ],
+                "tokens": [
+                  "你",
+                  "能",
+                  "幹嘛"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "介紹"
+                ],
+                "tokens": [
+                  "介紹"
+                ]
+              }
+            ],
+            "features": {
+              "在": 1,
+              "台": 1,
+              "北": 1,
+              "市": 1,
+              "的": 4,
+              "法": 2,
+              "國": 2,
+              "餐": 5,
+              "聽": 1,
+              "您好": 2,
+              "我": 3,
+              "想要": 1,
+              "找": 3,
+              "附近": 3,
+              "廳": 4,
+              "嗨": 2,
+              "要": 2,
+              "有": 1,
+              "甚麼": 2,
+              "便利": 1,
+              "商店": 1,
+              "提款": 1,
+              "機": 1,
+              "離": 1,
+              "開": 1,
+              "了": 1,
+              "謝謝": 1,
+              "再": 1,
+              "見": 1,
+              "你好": 1,
+              "哈囉": 1,
+              "HI": 1,
+              "能": 2,
+              "做": 1,
+              "你": 1,
+              "幹嘛": 1,
+              "介紹": 1
+            },
+            "isEditing": false,
+            "className": "BrainNLU",
+            "classifier": {
+              "className": "BrainClassifier",
+              "settings": {
+                "language": "zh",
+                "config": {
+                  "activation": "leaky-relu",
+                  "hiddenLayers": [],
+                  "iterations": 20000,
+                  "learningRate": 0.8,
+                  "errorThresh": 0.00005,
+                  "momentum": 0.5,
+                  "deltaErrorThresh": 0.000001,
+                  "maxDecimals": 9,
+                  "leakyReluAlpha": 0.06,
+                  "timeout": 120000
+                }
+              },
+              "labels": [],
+              "network": {
+                "layers": [],
+                "trainOpts": {
+                  "iterations": 20000,
+                  "errorThresh": 0.00005,
+                  "deltaErrorThresh": 0.000001,
+                  "learningRate": 0.8,
+                  "momentum": 0.5,
+                  "leakyReluAlpha": 0.06,
+                  "maxDecimals": 9
+                }
+              }
+            }
+          },
+          "default": {
+            "settings": {
+              "language": "zh",
+              "config": {
+                "activation": "leaky-relu",
+                "hiddenLayers": [],
+                "iterations": 20000,
+                "learningRate": 0.8,
+                "errorThresh": 0.00005,
+                "momentum": 0.5,
+                "deltaErrorThresh": 0.000001,
+                "maxDecimals": 9,
+                "leakyReluAlpha": 0.06,
+                "timeout": 120000
+              }
+            },
+            "language": "zh",
+            "keepStopwords": "zh",
+            "docs": [
+              {
+                "intent": "places.search",
+                "utterance": [
+                  "在",
+                  "台",
+                  "北",
+                  "市",
+                  "的",
+                  "法",
+                  "國",
+                  "餐",
+                  "聽"
+                ],
+                "tokens": [
+                  "在",
+                  "台",
+                  "北",
+                  "市",
+                  "的",
+                  "法",
+                  "國",
+                  "餐",
+                  "聽"
+                ]
+              },
+              {
+                "intent": "places.search",
+                "utterance": [
+                  "您好",
+                  "我",
+                  "想要",
+                  "找",
+                  "附近",
+                  "的",
+                  "法",
+                  "國",
+                  "餐",
+                  "廳"
+                ],
+                "tokens": [
+                  "您好",
+                  "我",
+                  "想要",
+                  "找",
+                  "附近",
+                  "的",
+                  "法",
+                  "國",
+                  "餐",
+                  "廳"
+                ]
+              },
+              {
+                "intent": "places.search",
+                "utterance": [
+                  "嗨",
+                  "我",
+                  "要",
+                  "找",
+                  "餐",
+                  "廳"
+                ],
+                "tokens": [
+                  "嗨",
+                  "我",
+                  "要",
+                  "找",
+                  "餐",
+                  "廳"
+                ]
+              },
+              {
+                "intent": "places.search",
+                "utterance": [
+                  "有",
+                  "甚麼",
+                  "餐",
+                  "廳"
+                ],
+                "tokens": [
+                  "有",
+                  "甚麼",
+                  "餐",
+                  "廳"
+                ]
+              },
+              {
+                "intent": "places.search",
+                "utterance": [
+                  "找",
+                  "餐",
+                  "廳"
+                ],
+                "tokens": [
+                  "找",
+                  "餐",
+                  "廳"
+                ]
+              },
+              {
+                "intent": "places.search",
+                "utterance": [
+                  "附近",
+                  "的",
+                  "便利",
+                  "商店"
+                ],
+                "tokens": [
+                  "附近",
+                  "的",
+                  "便利",
+                  "商店"
+                ]
+              },
+              {
+                "intent": "places.search",
+                "utterance": [
+                  "附近",
+                  "的",
+                  "提款",
+                  "機"
+                ],
+                "tokens": [
+                  "附近",
+                  "的",
+                  "提款",
+                  "機"
+                ]
+              },
+              {
+                "intent": "greeting.bye",
+                "utterance": [
+                  "我",
+                  "要",
+                  "離",
+                  "開",
+                  "了"
+                ],
+                "tokens": [
+                  "我",
+                  "要",
+                  "離",
+                  "開",
+                  "了"
+                ]
+              },
+              {
+                "intent": "greeting.bye",
+                "utterance": [
+                  "謝謝"
+                ],
+                "tokens": [
+                  "謝謝"
+                ]
+              },
+              {
+                "intent": "greeting.bye",
+                "utterance": [
+                  "再",
+                  "見"
+                ],
+                "tokens": [
+                  "再",
+                  "見"
+                ]
+              },
+              {
+                "intent": "greeting.hello",
+                "utterance": [
+                  "你好"
+                ],
+                "tokens": [
+                  "你好"
+                ]
+              },
+              {
+                "intent": "greeting.hello",
+                "utterance": [
+                  "哈囉"
+                ],
+                "tokens": [
+                  "哈囉"
+                ]
+              },
+              {
+                "intent": "greeting.hello",
+                "utterance": [
+                  "嗨"
+                ],
+                "tokens": [
+                  "嗨"
+                ]
+              },
+              {
+                "intent": "greeting.hello",
+                "utterance": [
+                  "HI"
+                ],
+                "tokens": [
+                  "HI"
+                ]
+              },
+              {
+                "intent": "greeting.hello",
+                "utterance": [
+                  "您好"
+                ],
+                "tokens": [
+                  "您好"
+                ]
+              },
+              {
+                "intent": "greeting.intro",
+                "utterance": [
+                  "能",
+                  "做",
+                  "甚麼"
+                ],
+                "tokens": [
+                  "能",
+                  "做",
+                  "甚麼"
+                ]
+              },
+              {
+                "intent": "greeting.intro",
+                "utterance": [
+                  "你",
+                  "能",
+                  "幹嘛"
+                ],
+                "tokens": [
+                  "你",
+                  "能",
+                  "幹嘛"
+                ]
+              },
+              {
+                "intent": "greeting.intro",
+                "utterance": [
+                  "介紹"
+                ],
+                "tokens": [
+                  "介紹"
+                ]
+              }
+            ],
+            "features": {
+              "在": 1,
+              "台": 1,
+              "北": 1,
+              "市": 1,
+              "的": 4,
+              "法": 2,
+              "國": 2,
+              "餐": 5,
+              "聽": 1,
+              "您好": 2,
+              "我": 3,
+              "想要": 1,
+              "找": 3,
+              "附近": 3,
+              "廳": 4,
+              "嗨": 2,
+              "要": 2,
+              "有": 1,
+              "甚麼": 2,
+              "便利": 1,
+              "商店": 1,
+              "提款": 1,
+              "機": 1,
+              "離": 1,
+              "開": 1,
+              "了": 1,
+              "謝謝": 1,
+              "再": 1,
+              "見": 1,
+              "你好": 1,
+              "哈囉": 1,
+              "HI": 1,
+              "能": 2,
+              "做": 1,
+              "你": 1,
+              "幹嘛": 1,
+              "介紹": 1
+            },
+            "isEditing": false,
+            "className": "BrainNLU",
+            "classifier": {
+              "className": "BrainClassifier",
+              "settings": {
+                "language": "zh",
+                "config": {
+                  "activation": "leaky-relu",
+                  "hiddenLayers": [],
+                  "iterations": 20000,
+                  "learningRate": 0.8,
+                  "errorThresh": 0.00005,
+                  "momentum": 0.5,
+                  "deltaErrorThresh": 0.000001,
+                  "maxDecimals": 9,
+                  "leakyReluAlpha": 0.06,
+                  "timeout": 120000
+                }
+              },
+              "labels": [],
+              "network": {
+                "sizes": [
+                  37,
+                  4
+                ],
+                "layers": [
+                  {
+                    "在": {},
+                    "台": {},
+                    "北": {},
+                    "市": {},
+                    "的": {},
+                    "法": {},
+                    "國": {},
+                    "餐": {},
+                    "聽": {},
+                    "您好": {},
+                    "我": {},
+                    "想要": {},
+                    "找": {},
+                    "附近": {},
+                    "廳": {},
+                    "嗨": {},
+                    "要": {},
+                    "有": {},
+                    "甚麼": {},
+                    "便利": {},
+                    "商店": {},
+                    "提款": {},
+                    "機": {},
+                    "離": {},
+                    "開": {},
+                    "了": {},
+                    "謝謝": {},
+                    "再": {},
+                    "見": {},
+                    "你好": {},
+                    "哈囉": {},
+                    "HI": {},
+                    "能": {},
+                    "做": {},
+                    "你": {},
+                    "幹嘛": {},
+                    "介紹": {}
+                  },
+                  {
+                    "places.search": {
+                      "bias": 0.813258767,
+                      "weights": {
+                        "在": 1.261821628,
+                        "台": 1.261821628,
+                        "北": 1.261821628,
+                        "市": 1.261821628,
+                        "的": 5.268116951,
+                        "法": -1.300280094,
+                        "國": -1.300280094,
+                        "餐": 6.86954546,
+                        "聽": 1.261821628,
+                        "您好": -3.14888978,
+                        "我": -0.928294897,
+                        "想要": -2.562101603,
+                        "找": 3.36274457,
+                        "附近": 4.006290436,
+                        "廳": 5.60771513,
+                        "嗨": -0.723792136,
+                        "要": 1.633807659,
+                        "有": 2.244977713,
+                        "甚麼": 1.142751575,
+                        "便利": 3.28513813,
+                        "商店": 3.28513813,
+                        "提款": 3.283252478,
+                        "機": 3.283252478,
+                        "離": -0.944722533,
+                        "開": -0.944722533,
+                        "了": -0.944722533,
+                        "謝謝": -1.059638023,
+                        "再": -0.692265391,
+                        "見": -0.692265391,
+                        "你好": -1.027173042,
+                        "哈囉": -1.008506179,
+                        "HI": -0.934483945,
+                        "能": -1.354322672,
+                        "做": -1.102225184,
+                        "你": -0.252097487,
+                        "幹嘛": -0.252097487,
+                        "介紹": -0.901041031
+                      }
+                    },
+                    "greeting.bye": {
+                      "bias": 2.720936537,
+                      "weights": {
+                        "在": -0.146009609,
+                        "台": -0.146009609,
+                        "北": -0.146009609,
+                        "市": -0.146009609,
+                        "的": -1.066834569,
+                        "法": -0.335444421,
+                        "國": -0.335444421,
+                        "餐": -1.588772058,
+                        "聽": -0.146009609,
+                        "您好": -2.653420687,
+                        "我": 1.953588724,
+                        "想要": -0.189434797,
+                        "找": -1.368744731,
+                        "附近": -0.920825303,
+                        "廳": -1.442762494,
+                        "嗨": -2.716027498,
+                        "要": 2.143024921,
+                        "有": -0.074017741,
+                        "甚麼": -0.728192031,
+                        "便利": -0.365820408,
+                        "商店": -0.365820408,
+                        "提款": -0.365570098,
+                        "機": -0.365570098,
+                        "離": 3.283829212,
+                        "開": 3.283829212,
+                        "了": 3.283829212,
+                        "謝謝": 13.574652672,
+                        "再": 6.955356121,
+                        "見": 6.955356121,
+                        "你好": -2.693960667,
+                        "哈囉": -2.68123436,
+                        "HI": -2.661454439,
+                        "能": -1.344362617,
+                        "做": -0.654174268,
+                        "你": -0.690188408,
+                        "幹嘛": -0.690188408,
+                        "介紹": -2.625687361
+                      }
+                    },
+                    "greeting.hello": {
+                      "bias": 7.942946911,
+                      "weights": {
+                        "在": -0.258478314,
+                        "台": -0.258478314,
+                        "北": -0.258478314,
+                        "市": -0.258478314,
+                        "的": -2.939977646,
+                        "法": -0.623632371,
+                        "國": -0.623632371,
+                        "餐": -3.549355507,
+                        "聽": -0.258478314,
+                        "您好": 8.53758812,
+                        "我": -3.430156946,
+                        "想要": -0.365154058,
+                        "找": -2.958787441,
+                        "附近": -2.681499004,
+                        "廳": -3.290877342,
+                        "嗨": 8.416412354,
+                        "要": -3.065003157,
+                        "有": -0.332089543,
+                        "甚麼": -2.203334093,
+                        "便利": -1.158504128,
+                        "商店": -1.158504128,
+                        "提款": -1.157840848,
+                        "機": -1.157840848,
+                        "離": -0.746735394,
+                        "開": -0.746735394,
+                        "了": -0.746735394,
+                        "謝謝": -7.55006218,
+                        "再": -3.939283371,
+                        "見": -3.939283371,
+                        "你好": 8.655179024,
+                        "哈囉": 8.669276237,
+                        "HI": 8.584871292,
+                        "能": -3.903639317,
+                        "做": -1.871245027,
+                        "你": -2.032393694,
+                        "幹嘛": -2.032393694,
+                        "介紹": -7.641692638
+                      }
+                    },
+                    "greeting.intro": {
+                      "bias": 2.258743048,
+                      "weights": {
+                        "在": -0.186379373,
+                        "台": -0.186379373,
+                        "北": -0.186379373,
+                        "市": -0.186379373,
+                        "的": -1.033810377,
+                        "法": -0.30332762,
+                        "國": -0.30332762,
+                        "餐": -1.96158421,
+                        "聽": -0.186379373,
+                        "您好": -2.152542114,
+                        "我": -0.709442616,
+                        "想要": -0.116948262,
+                        "找": -0.44732976,
+                        "附近": -0.847431004,
+                        "廳": -1.775204778,
+                        "嗨": -2.180749655,
+                        "要": -0.592494369,
+                        "有": -1.327875018,
+                        "甚麼": 2.777139425,
+                        "便利": -0.37880376,
+                        "商店": -0.37880376,
+                        "提款": -0.351678967,
+                        "機": -0.351678967,
+                        "離": -0.419069916,
+                        "開": -0.419069916,
+                        "了": -0.419069916,
+                        "謝謝": -2.214288712,
+                        "再": -1.13952744,
+                        "見": -1.13952744,
+                        "你好": -2.199812889,
+                        "哈囉": -2.187623978,
+                        "HI": -2.162624121,
+                        "能": 7.547755241,
+                        "做": 4.105013847,
+                        "你": 3.442738771,
+                        "幹嘛": 3.442738771,
+                        "介紹": 14.007646561
+                      }
+                    }
+                  }
+                ],
+                "trainOpts": {
+                  "iterations": 20000,
+                  "errorThresh": 0.00005,
+                  "deltaErrorThresh": 0.000001,
+                  "learningRate": 0.8,
+                  "momentum": 0.5,
+                  "leakyReluAlpha": 0.06,
+                  "maxDecimals": 9
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "extraSentences": [
+      [
+        "zh",
+        "在台北市的法國餐聽"
+      ],
+      [
+        "zh",
+        "您好，我想要找附近的法國餐廳"
+      ],
+      [
+        "zh",
+        "嗨，我要找餐廳"
+      ],
+      [
+        "zh",
+        "有甚麼餐廳"
+      ],
+      [
+        "zh",
+        "找餐廳"
+      ],
+      [
+        "zh",
+        "附近的便利商店"
+      ],
+      [
+        "zh",
+        "附近的提款機"
+      ],
+      [
+        "zh",
+        "我要離開了"
+      ],
+      [
+        "zh",
+        "謝謝"
+      ],
+      [
+        "zh",
+        "再見"
+      ],
+      [
+        "zh",
+        "你好"
+      ],
+      [
+        "zh",
+        "哈囉"
+      ],
+      [
+        "zh",
+        "嗨!"
+      ],
+      [
+        "zh",
+        "HI"
+      ],
+      [
+        "zh",
+        "您好"
+      ],
+      [
+        "zh",
+        "能做甚麼"
+      ],
+      [
+        "zh",
+        "你能幹嘛"
+      ],
+      [
+        "zh",
+        "介紹"
+      ]
+    ]
+  },
+  "nerManager": {
+    "settings": {},
+    "threshold": 0.8,
+    "builtins": [
+      "Number",
+      "Ordinal",
+      "Percentage",
+      "Age",
+      "Currency",
+      "Dimension",
+      "Temperature",
+      "DateTime",
+      "PhoneNumber",
+      "IpAddress",
+      "Boolean",
+      "Email",
+      "Hashtag",
+      "URL"
+    ],
+    "namedEntities": {
+      "餐廳": {
+        "type": "enum",
+        "name": "餐廳",
+        "localeFallback": {
+          "*": "en"
+        },
+        "locales": {
+          "zh": {
+            "餐廳": [
+              "餐廳",
+              "餐館",
+              "吃飯的地方",
+              "賣吃的地方",
+              "賣吃的店家"
+            ]
+          }
+        }
+      },
+      "範圍": {
+        "type": "enum",
+        "name": "範圍",
+        "localeFallback": {
+          "*": "en"
+        },
+        "locales": {
+          "zh": {
+            "範圍": [
+              "範圍",
+              "最近的",
+              "附近",
+              "鄰近",
+              "旁邊"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "slotManager": {},
+  "responses": {
+    "zh": {
+      "places.search": [
+        {
+          "response": "找地點"
+        }
+      ],
+      "greetings.hello": [
+        {
+          "response": "你好"
+        }
+      ],
+      "greeting.bye": [
+        {
+          "response": "掰掰"
+        }
+      ],
+      "greeting.intro": [
+        {
+          "response": "跟我說話我就會知道你要做甚麼"
+        }
+      ]
+    }
+  },
+  "actions": {}
+}

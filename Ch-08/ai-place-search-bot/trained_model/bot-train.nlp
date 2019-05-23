@@ -1,0 +1,956 @@
+{
+  "settings": {
+    "languages": [
+      "zh"
+    ]
+  },
+  "nluManager": {
+    "settings": {},
+    "languages": [
+      "zh"
+    ],
+    "intentDomains": {},
+    "domainManagers": {
+      "zh": {
+        "settings": {
+          "language": "zh",
+          "config": {
+            "activation": "leaky-relu",
+            "hiddenLayers": [],
+            "iterations": 20000,
+            "learningRate": 0.8,
+            "errorThresh": 0.00005,
+            "momentum": 0.5,
+            "deltaErrorThresh": 0.000001,
+            "maxDecimals": 9,
+            "leakyReluAlpha": 0.06,
+            "timeout": 120000
+          }
+        },
+        "language": "zh",
+        "nluClassName": "BrainNLU",
+        "useMasterDomain": true,
+        "trainByDomain": true,
+        "keepStopwords": true,
+        "stemDict": {
+          "places,我,找,要": {
+            "domain": "default",
+            "intent": "places.search"
+          },
+          "找,提款,機": {
+            "domain": "default",
+            "intent": "places.search"
+          },
+          "places,找": {
+            "domain": "default",
+            "intent": "places.search"
+          },
+          "places,哪裡,有": {
+            "domain": "default",
+            "intent": "places.search"
+          },
+          "places,最近,的": {
+            "domain": "default",
+            "intent": "places.search.near"
+          },
+          "places,wantnear": {
+            "domain": "default",
+            "intent": "places.search.near"
+          },
+          "place,places,tw": {
+            "domain": "default",
+            "intent": "places.search.region"
+          },
+          "places,北,台,的": {
+            "domain": "default",
+            "intent": "places.search.region"
+          },
+          "place,places,tw,的": {
+            "domain": "default",
+            "intent": "places.search.region"
+          },
+          "介紹,你自己": {
+            "domain": "default",
+            "intent": "greeting.intro"
+          },
+          "你,做,會,甚麼": {
+            "domain": "default",
+            "intent": "greeting.intro"
+          },
+          "功能,有,甚麼": {
+            "domain": "default",
+            "intent": "greeting.intro"
+          },
+          "Hello": {
+            "domain": "default",
+            "intent": "greeting.intro"
+          }
+        },
+        "intentDict": {
+          "places.search": "default",
+          "places.search.near": "default",
+          "places.search.region": "default",
+          "greeting.intro": "default"
+        },
+        "useStemDict": true,
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "language": "zh",
+              "config": {
+                "activation": "leaky-relu",
+                "hiddenLayers": [],
+                "iterations": 20000,
+                "learningRate": 0.8,
+                "errorThresh": 0.00005,
+                "momentum": 0.5,
+                "deltaErrorThresh": 0.000001,
+                "maxDecimals": 9,
+                "leakyReluAlpha": 0.06,
+                "timeout": 120000
+              }
+            },
+            "language": "zh",
+            "keepStopwords": true,
+            "docs": [
+              {
+                "intent": "default",
+                "utterance": [
+                  "我",
+                  "要",
+                  "找",
+                  "places"
+                ],
+                "tokens": [
+                  "我",
+                  "要",
+                  "找",
+                  "places"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "找",
+                  "提款",
+                  "機"
+                ],
+                "tokens": [
+                  "找",
+                  "提款",
+                  "機"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "找",
+                  "places"
+                ],
+                "tokens": [
+                  "找",
+                  "places"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "哪裡",
+                  "有",
+                  "places"
+                ],
+                "tokens": [
+                  "哪裡",
+                  "有",
+                  "places"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "最近",
+                  "的",
+                  "places"
+                ],
+                "tokens": [
+                  "最近",
+                  "的",
+                  "places"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "wantnear",
+                  "places"
+                ],
+                "tokens": [
+                  "wantnear",
+                  "places"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "tw",
+                  "place",
+                  "places"
+                ],
+                "tokens": [
+                  "tw",
+                  "place",
+                  "places"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "台",
+                  "北",
+                  "的",
+                  "places"
+                ],
+                "tokens": [
+                  "台",
+                  "北",
+                  "的",
+                  "places"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "tw",
+                  "place",
+                  "的",
+                  "places"
+                ],
+                "tokens": [
+                  "tw",
+                  "place",
+                  "的",
+                  "places"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "介紹",
+                  "你自己"
+                ],
+                "tokens": [
+                  "介紹",
+                  "你自己"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "你",
+                  "會",
+                  "做",
+                  "甚麼"
+                ],
+                "tokens": [
+                  "你",
+                  "會",
+                  "做",
+                  "甚麼"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "有",
+                  "甚麼",
+                  "功能"
+                ],
+                "tokens": [
+                  "有",
+                  "甚麼",
+                  "功能"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "Hello"
+                ],
+                "tokens": [
+                  "Hello"
+                ]
+              }
+            ],
+            "features": {
+              "我": 1,
+              "要": 1,
+              "找": 3,
+              "places": 8,
+              "提款": 1,
+              "機": 1,
+              "哪裡": 1,
+              "有": 2,
+              "最近": 1,
+              "的": 3,
+              "wantnear": 1,
+              "tw": 2,
+              "place": 2,
+              "台": 1,
+              "北": 1,
+              "介紹": 1,
+              "你自己": 1,
+              "你": 1,
+              "會": 1,
+              "做": 1,
+              "甚麼": 2,
+              "功能": 1,
+              "Hello": 1
+            },
+            "isEditing": false,
+            "className": "BrainNLU",
+            "classifier": {
+              "className": "BrainClassifier",
+              "settings": {
+                "language": "zh",
+                "config": {
+                  "activation": "leaky-relu",
+                  "hiddenLayers": [],
+                  "iterations": 20000,
+                  "learningRate": 0.8,
+                  "errorThresh": 0.00005,
+                  "momentum": 0.5,
+                  "deltaErrorThresh": 0.000001,
+                  "maxDecimals": 9,
+                  "leakyReluAlpha": 0.06,
+                  "timeout": 120000
+                }
+              },
+              "labels": [],
+              "network": {
+                "layers": [],
+                "trainOpts": {
+                  "iterations": 20000,
+                  "errorThresh": 0.00005,
+                  "deltaErrorThresh": 0.000001,
+                  "learningRate": 0.8,
+                  "momentum": 0.5,
+                  "leakyReluAlpha": 0.06,
+                  "maxDecimals": 9
+                }
+              }
+            }
+          },
+          "default": {
+            "settings": {
+              "language": "zh",
+              "config": {
+                "activation": "leaky-relu",
+                "hiddenLayers": [],
+                "iterations": 20000,
+                "learningRate": 0.8,
+                "errorThresh": 0.00005,
+                "momentum": 0.5,
+                "deltaErrorThresh": 0.000001,
+                "maxDecimals": 9,
+                "leakyReluAlpha": 0.06,
+                "timeout": 120000
+              }
+            },
+            "language": "zh",
+            "keepStopwords": true,
+            "docs": [
+              {
+                "intent": "places.search",
+                "utterance": [
+                  "我",
+                  "要",
+                  "找",
+                  "places"
+                ],
+                "tokens": [
+                  "我",
+                  "要",
+                  "找",
+                  "places"
+                ]
+              },
+              {
+                "intent": "places.search",
+                "utterance": [
+                  "找",
+                  "提款",
+                  "機"
+                ],
+                "tokens": [
+                  "找",
+                  "提款",
+                  "機"
+                ]
+              },
+              {
+                "intent": "places.search",
+                "utterance": [
+                  "找",
+                  "places"
+                ],
+                "tokens": [
+                  "找",
+                  "places"
+                ]
+              },
+              {
+                "intent": "places.search",
+                "utterance": [
+                  "哪裡",
+                  "有",
+                  "places"
+                ],
+                "tokens": [
+                  "哪裡",
+                  "有",
+                  "places"
+                ]
+              },
+              {
+                "intent": "places.search.near",
+                "utterance": [
+                  "最近",
+                  "的",
+                  "places"
+                ],
+                "tokens": [
+                  "最近",
+                  "的",
+                  "places"
+                ]
+              },
+              {
+                "intent": "places.search.near",
+                "utterance": [
+                  "wantnear",
+                  "places"
+                ],
+                "tokens": [
+                  "wantnear",
+                  "places"
+                ]
+              },
+              {
+                "intent": "places.search.region",
+                "utterance": [
+                  "tw",
+                  "place",
+                  "places"
+                ],
+                "tokens": [
+                  "tw",
+                  "place",
+                  "places"
+                ]
+              },
+              {
+                "intent": "places.search.region",
+                "utterance": [
+                  "台",
+                  "北",
+                  "的",
+                  "places"
+                ],
+                "tokens": [
+                  "台",
+                  "北",
+                  "的",
+                  "places"
+                ]
+              },
+              {
+                "intent": "places.search.region",
+                "utterance": [
+                  "tw",
+                  "place",
+                  "的",
+                  "places"
+                ],
+                "tokens": [
+                  "tw",
+                  "place",
+                  "的",
+                  "places"
+                ]
+              },
+              {
+                "intent": "greeting.intro",
+                "utterance": [
+                  "介紹",
+                  "你自己"
+                ],
+                "tokens": [
+                  "介紹",
+                  "你自己"
+                ]
+              },
+              {
+                "intent": "greeting.intro",
+                "utterance": [
+                  "你",
+                  "會",
+                  "做",
+                  "甚麼"
+                ],
+                "tokens": [
+                  "你",
+                  "會",
+                  "做",
+                  "甚麼"
+                ]
+              },
+              {
+                "intent": "greeting.intro",
+                "utterance": [
+                  "有",
+                  "甚麼",
+                  "功能"
+                ],
+                "tokens": [
+                  "有",
+                  "甚麼",
+                  "功能"
+                ]
+              },
+              {
+                "intent": "greeting.intro",
+                "utterance": [
+                  "Hello"
+                ],
+                "tokens": [
+                  "Hello"
+                ]
+              }
+            ],
+            "features": {
+              "我": 1,
+              "要": 1,
+              "找": 3,
+              "places": 8,
+              "提款": 1,
+              "機": 1,
+              "哪裡": 1,
+              "有": 2,
+              "最近": 1,
+              "的": 3,
+              "wantnear": 1,
+              "tw": 2,
+              "place": 2,
+              "台": 1,
+              "北": 1,
+              "介紹": 1,
+              "你自己": 1,
+              "你": 1,
+              "會": 1,
+              "做": 1,
+              "甚麼": 2,
+              "功能": 1,
+              "Hello": 1
+            },
+            "isEditing": false,
+            "className": "BrainNLU",
+            "classifier": {
+              "className": "BrainClassifier",
+              "settings": {
+                "language": "zh",
+                "config": {
+                  "activation": "leaky-relu",
+                  "hiddenLayers": [],
+                  "iterations": 20000,
+                  "learningRate": 0.8,
+                  "errorThresh": 0.00005,
+                  "momentum": 0.5,
+                  "deltaErrorThresh": 0.000001,
+                  "maxDecimals": 9,
+                  "leakyReluAlpha": 0.06,
+                  "timeout": 120000
+                }
+              },
+              "labels": [],
+              "network": {
+                "sizes": [
+                  23,
+                  4
+                ],
+                "layers": [
+                  {
+                    "我": {},
+                    "要": {},
+                    "找": {},
+                    "places": {},
+                    "提款": {},
+                    "機": {},
+                    "哪裡": {},
+                    "有": {},
+                    "最近": {},
+                    "的": {},
+                    "wantnear": {},
+                    "tw": {},
+                    "place": {},
+                    "台": {},
+                    "北": {},
+                    "介紹": {},
+                    "你自己": {},
+                    "你": {},
+                    "會": {},
+                    "做": {},
+                    "甚麼": {},
+                    "功能": {},
+                    "Hello": {}
+                  },
+                  {
+                    "places.search": {
+                      "bias": 1.042033553,
+                      "weights": {
+                        "我": 0.197572857,
+                        "要": 0.197572857,
+                        "找": 10.961586952,
+                        "places": 4.379304886,
+                        "提款": 2.376588106,
+                        "機": 2.376588106,
+                        "哪裡": 6.913035393,
+                        "有": 4.339541912,
+                        "最近": -2.043430567,
+                        "的": -3.382428408,
+                        "wantnear": -5.351741314,
+                        "tw": -2.705530167,
+                        "place": -2.705530167,
+                        "台": -1.018031001,
+                        "北": -1.018031001,
+                        "介紹": -0.709116459,
+                        "你自己": -0.709116459,
+                        "你": -0.277782023,
+                        "會": -0.277782023,
+                        "做": -0.277782023,
+                        "甚麼": -2.851275921,
+                        "功能": -2.573493958,
+                        "Hello": -1.11137116
+                      }
+                    },
+                    "places.search.near": {
+                      "bias": 1.110572696,
+                      "weights": {
+                        "我": -1.063765287,
+                        "要": -1.063765287,
+                        "找": -5.395534039,
+                        "places": 4.354380131,
+                        "提款": -0.055936199,
+                        "機": -0.055936199,
+                        "哪裡": -2.661968708,
+                        "有": -2.790831327,
+                        "最近": 8.943631172,
+                        "的": 2.26413846,
+                        "wantnear": 11.140036583,
+                        "tw": -3.864048004,
+                        "place": -3.864048004,
+                        "台": -3.863682032,
+                        "北": -3.863682032,
+                        "介紹": -0.576372206,
+                        "你自己": -0.576372206,
+                        "你": -0.264963567,
+                        "會": -0.264963567,
+                        "做": -0.264963567,
+                        "甚麼": -0.393826127,
+                        "功能": -0.128862485,
+                        "Hello": -1.106925964
+                      }
+                    },
+                    "places.search.region": {
+                      "bias": 0.478787214,
+                      "weights": {
+                        "我": -0.879179657,
+                        "要": -0.879179657,
+                        "找": -2.678804874,
+                        "places": 2.264640093,
+                        "提款": -0.085704051,
+                        "機": -0.085704051,
+                        "哪裡": -1.264880776,
+                        "有": -1.444921851,
+                        "最近": -4.436940193,
+                        "的": 0.793590903,
+                        "wantnear": -2.638775349,
+                        "tw": 6.721479893,
+                        "place": 6.721479893,
+                        "台": 6.47685957,
+                        "北": 6.47685957,
+                        "介紹": -0.350544661,
+                        "你自己": -0.350544661,
+                        "你": -0.221672401,
+                        "會": -0.221672401,
+                        "做": -0.221672401,
+                        "甚麼": -0.40171361,
+                        "功能": -0.180041149,
+                        "Hello": -0.467739016
+                      }
+                    },
+                    "greeting.intro": {
+                      "bias": 6.532734871,
+                      "weights": {
+                        "我": -0.396214962,
+                        "要": -0.396214962,
+                        "找": -2.703208685,
+                        "places": -5.442451477,
+                        "提款": -1.912842631,
+                        "機": -1.912842631,
+                        "哪裡": -2.366884232,
+                        "有": 1.259196997,
+                        "最近": -0.46902138,
+                        "的": -0.710262775,
+                        "wantnear": -1.082157969,
+                        "tw": -0.544623375,
+                        "place": -0.544623375,
+                        "台": -0.189395383,
+                        "北": -0.189395383,
+                        "介紹": 5.071919918,
+                        "你自己": 5.071919918,
+                        "你": 1.627665997,
+                        "會": 1.627665997,
+                        "做": 1.627665997,
+                        "甚麼": 5.253747463,
+                        "功能": 3.626081705,
+                        "Hello": 10.093113899
+                      }
+                    }
+                  }
+                ],
+                "trainOpts": {
+                  "iterations": 20000,
+                  "errorThresh": 0.00005,
+                  "deltaErrorThresh": 0.000001,
+                  "learningRate": 0.8,
+                  "momentum": 0.5,
+                  "leakyReluAlpha": 0.06,
+                  "maxDecimals": 9
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "extraSentences": [
+      [
+        "zh",
+        "我要找%places%"
+      ],
+      [
+        "zh",
+        "找%places%"
+      ],
+      [
+        "zh",
+        "找提款機"
+      ],
+      [
+        "zh",
+        "找%places%"
+      ],
+      [
+        "zh",
+        "哪裡有%places%"
+      ],
+      [
+        "zh",
+        "%wantnear% %places%"
+      ],
+      [
+        "zh",
+        "最近的%places%"
+      ],
+      [
+        "zh",
+        "%wantnear%%places%"
+      ],
+      [
+        "zh",
+        "%tw_place%%places%"
+      ],
+      [
+        "zh",
+        "台北的%places%"
+      ],
+      [
+        "zh",
+        "%tw_place%的%places%"
+      ],
+      [
+        "zh",
+        "介紹你自己"
+      ],
+      [
+        "zh",
+        "你會做甚麼"
+      ],
+      [
+        "zh",
+        "有甚麼功能"
+      ],
+      [
+        "zh",
+        "Hello"
+      ]
+    ]
+  },
+  "nerManager": {
+    "settings": {},
+    "threshold": 0.8,
+    "builtins": [
+      "Number",
+      "Ordinal",
+      "Percentage",
+      "Age",
+      "Currency",
+      "Dimension",
+      "Temperature",
+      "DateTime",
+      "PhoneNumber",
+      "IpAddress",
+      "Boolean",
+      "Email",
+      "Hashtag",
+      "URL"
+    ],
+    "namedEntities": {
+      "places": {
+        "type": "enum",
+        "name": "places",
+        "localeFallback": {
+          "*": "en"
+        },
+        "locales": {
+          "zh": {
+            "提款機": [
+              "atm",
+              "ATM",
+              "提款機",
+              "領錢的地方",
+              "自動櫃員機"
+            ],
+            "便利商店": [
+              "便利商店",
+              "7-11",
+              "萊爾富",
+              "全家",
+              "小七",
+              "小7",
+              "OK"
+            ],
+            "餐廳": [
+              "餐廳",
+              "餐館",
+              "飯館",
+              "法國餐廳",
+              "台式餐廳",
+              "日式餐廳",
+              "中式餐廳",
+              "泰式餐廳"
+            ]
+          }
+        }
+      },
+      "tw_place": {
+        "type": "enum",
+        "name": "tw_place",
+        "localeFallback": {
+          "*": "en"
+        },
+        "locales": {
+          "zh": {
+            "特定地區": [
+              "台北",
+              "臺北",
+              "台中",
+              "臺中",
+              "高雄"
+            ]
+          }
+        }
+      },
+      "wantnear": {
+        "type": "enum",
+        "name": "wantnear",
+        "localeFallback": {
+          "*": "en"
+        },
+        "locales": {
+          "zh": {
+            "附近": [
+              "附近的",
+              "最近的",
+              "鄰近的",
+              "旁邊"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "slotManager": {
+    "places.search": {
+      "places": {
+        "intent": "places.search",
+        "entity": "places",
+        "mandatory": false,
+        "locales": {}
+      }
+    },
+    "places.search.near": {
+      "places": {
+        "intent": "places.search.near",
+        "entity": "places",
+        "mandatory": false,
+        "locales": {}
+      },
+      "wantnear": {
+        "intent": "places.search.near",
+        "entity": "wantnear",
+        "mandatory": false,
+        "locales": {}
+      }
+    },
+    "places.search.region": {
+      "places": {
+        "intent": "places.search.region",
+        "entity": "places",
+        "mandatory": false,
+        "locales": {}
+      },
+      "tw_place": {
+        "intent": "places.search.region",
+        "entity": "tw_place",
+        "mandatory": false,
+        "locales": {}
+      }
+    }
+  },
+  "responses": {
+    "zh": {
+      "places.search": [
+        {
+          "response": "找{{places}}，我需要你的位置"
+        }
+      ],
+      "places.search.near": [
+        {
+          "response": "找{{wantnear}}的{{places}}，我需要你的位置"
+        }
+      ],
+      "places.search.region": [
+        {
+          "response": "找{{tw_place}}的{{places}}"
+        }
+      ],
+      "greeting.intro": [
+        {
+          "response": "我可以幫你找餐廳、提款機或便利商店"
+        }
+      ]
+    }
+  },
+  "actions": {}
+}

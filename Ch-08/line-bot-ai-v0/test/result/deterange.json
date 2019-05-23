@@ -1,0 +1,29 @@
+"entities": [
+    {
+        "start": 0,
+        "end": 1,
+        "len": 2,
+        "accuracy": 0.95,
+        "sourceText": "今年",
+        "utteranceText": "今年",
+        "entity": "daterange",
+        "resolution": {
+            "type": "daterange",
+            "timex": "2019"
+        }
+    },
+    {
+        "start": 3,
+        "end": 4,
+        "len": 2,
+        "accuracy": 0.95,
+        "sourceText": "20",
+        "utteranceText": "20",
+        "entity": "number",
+        "resolution": {
+            "strValue": "20",
+            "value": 20,
+            "subtype": "integer"
+        }
+    }
+]
