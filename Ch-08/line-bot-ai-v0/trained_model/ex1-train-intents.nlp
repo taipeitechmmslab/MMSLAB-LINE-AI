@@ -1113,7 +1113,7 @@
           "response": "找地點"
         }
       ],
-      "greetings.hello": [
+      "greeting.hello": [
         {
           "response": "你好"
         }

@@ -23,7 +23,7 @@ manager.addDocument('zh', '介紹', 'greeting.intro');
 
 //將意圖轉換為文字訊息
 manager.addAnswer('zh', 'places.search', '找地點');
-manager.addAnswer('zh', 'greetings.hello', '你好');
+manager.addAnswer('zh', 'greeting.hello', '你好');
 manager.addAnswer('zh', 'greeting.bye', '掰掰');
 manager.addAnswer('zh', 'greeting.intro', '跟我說話我就會知道你要做甚麼');
 
