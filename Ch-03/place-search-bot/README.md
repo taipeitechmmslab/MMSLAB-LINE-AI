@@ -1,4 +1,4 @@
-# Echo Bot
+# LINE Bot
 
 An example LINE bot search nearby place
 
