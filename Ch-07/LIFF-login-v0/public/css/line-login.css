@@ -7,13 +7,6 @@
   word-break: break-all;
 }
 
-#web-login-button a {
-  width: 151px;
-  height: 44px;
-  background: url("../img/btn_login_base.png") no-repeat;
-  display: block;
-}
-
 .profile-img {
   width: 100px;
   height: 100px;
