@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "bluebird": "^3.5.4",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "express-session": "^1.16.1",
     "jsonwebtoken": "^8.5.1",
     "pug": "^2.0.3",
